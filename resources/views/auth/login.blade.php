@@ -27,7 +27,7 @@
                             <!-- Logo -->
                             <div class="card-header pt-4 pb-4 text-center bg-primary">
                                 <a href="index.html">
-                                    <span><img src="assets/images/logo.png" alt="" height="18"></span>
+                                    <!-- <span><img src="assets/images/logo.png" alt="" height="18"></span> -->
                                 </a>
                             </div>
 
@@ -37,20 +37,27 @@
                                     <h4 class="text-dark-50 text-center mt-0 fw-bold">Sign In</h4>
                                     <p class="text-muted mb-4">Enter your email address and token to access admin panel.</p>
                                 </div>
+                                <div class="text-center w-75 m-auto">
+                                    <div class="result">
+                                        @if(Session::get('fail'))
+                                        <div class="alert alert-danger">
+                                            {{ Session::get('fail')}}
+                                        </div>
+                                        @endif
+                                        @if($errors->any())
+                                            <h5>{{$errors->first()}}</h5>
+                                        @endif
+                                   </div>
+                                </div>
+
 
                                 <form action="{{ route('auth.check') }}" method="post">
                                 @csrf
-                                <div class="result">
-                                @if(Session::get('fail'))
-                                    <div class="alert alert-danger">
-                                        {{ Session::get('fail')}}
-                                    </div>
-                                @endif
-                                </div>
+                                
                                     <div class="mb-3">
                                         <label for="emailaddress" class="form-label">Email address</label>
                                         <input class="form-control" type="email" name="email" id="emailaddress" required="" placeholder="Enter your email" value="{{ old ('email') }}">
-                                        <span class="text-danger"> @error('email') {{ $message }} @enderror </span>
+                                        <!-- <span class="text-danger"> @error('email') {{ $message }} @enderror </span> -->
                                     </div>
                                     
 
@@ -63,7 +70,7 @@
                                                 <span class="password-eye"></span>
                                             </div>
                                         </div>
-                                        <span class="text-danger"> @error('token') {{ $message }} @enderror </span>
+                                        <!-- <span class="text-danger"> @error('token') {{ $message }} @enderror </span> -->
                                     </div>
 
                                     <!-- <div class="mb-3 mb-3">

@@ -17,4 +17,7 @@ use App\Http\Controllers\UserAuthController;
 Route::get('/', [UserAuthController::class, 'login']);
 Route::get('login',[UserAuthController::class, 'login']);
 Route::post('check',[UserAuthController::class, 'check'])->name('auth.check');
-Route::get('dashbord',[UserAuthController::class, 'dashbord']);
+Route::get('dashbord_dtn',[UserAuthController::class, 'dashbord_dtn']);
+Route::get('dashbord_en',[UserAuthController::class, 'dashbord_en']);
+Route::get('dashbord_pp',[UserAuthController::class, 'dashbord_pp']);
+Route::get('dashbord_j',[UserAuthController::class, 'dashbord_j']);
