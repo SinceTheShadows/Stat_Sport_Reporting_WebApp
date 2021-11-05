@@ -8,7 +8,21 @@ use App\Models\User;
 class UserAuthController extends Controller
 {
     function login() {
-        return view ('auth.login');
+        if(session()->has('LogUser') && session()->has('RoleUser')){
+            if(session('RoleUser') == "dtn"){
+                return redirect('dashbord_dtn');
+            }elseif(session('RoleUser') == "en"){
+                return redirect('dashbord_en');
+            }elseif(session('RoleUser') == "pp"){
+                return redirect('dashbord_pp');
+            }elseif(session('RoleUser') == "j"){
+                return redirect('dashbord_j');
+            }else{
+                return redirect('login');
+            }
+        }else {
+            return view ('auth.login');
+        }
     }
     function check(Request $request){
         $request->validate([
@@ -20,6 +34,7 @@ class UserAuthController extends Controller
         if($user != null){
             if($request->email == $user->email){
                 $request->session()->put('LogUser', $user->token);
+                $request->session()->put('RoleUser', $user->role);
                 if($user->role == "dtn"){
                     return redirect('dashbord_dtn');
                 }elseif($user->role == "en"){
@@ -45,16 +60,55 @@ class UserAuthController extends Controller
 
     }
     function dashbord_dtn(){
-        return view ('dash.dtn');
+        if(session()->has('LogUser') && session()->has('RoleUser')){
+            $user = User::where('token', '=',session('LogUser'))->first();
+            $data = [
+                'User' =>$user
+            ];
+            return view ('dash.dtn', $data);
+        }else{
+            return redirect('login');
+        }
     }
     function dashbord_en(){
-        return view ('dash.en');
+        if(session()->has('LogUser') && session()->has('RoleUser')){
+            $user = User::where('token', '=',session('LogUser'))->first();
+            $data = [
+                'User' =>$user
+            ];
+            return view ('dash.en', $data);
+        }else{
+            return redirect('login');
+        }
     }
     function dashbord_pp(){
-        return view ('dash.pp');
+        if(session()->has('LogUser') && session()->has('RoleUser')){
+            $user = User::where('token', '=',session('LogUser'))->first();
+            $data = [
+                'User' =>$user
+            ];
+            return view ('dash.pp',$data);
+        }else{
+            return redirect('login');
+        }
     }
     function dashbord_j(){
-        return view ('dash.j');
+        if(session()->has('LogUser') && session()->has('RoleUser')){
+            $user = User::where('token', '=',session('LogUser'))->first();
+            $data = [
+                'User' =>$user
+            ];
+            return view ('dash.j',$data);
+        }else{
+            return redirect('login');
+        }
+    }
+    function Logout(){
+        if(session()->has('LogUser') && session()->has('RoleUser')){
+            session()->pull('LogUser');
+            session()->pull('RoleUser');
+            return redirect('login');
+        }
     }
 
 }

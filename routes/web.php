@@ -21,3 +21,4 @@ Route::get('dashbord_dtn',[UserAuthController::class, 'dashbord_dtn']);
 Route::get('dashbord_en',[UserAuthController::class, 'dashbord_en']);
 Route::get('dashbord_pp',[UserAuthController::class, 'dashbord_pp']);
 Route::get('dashbord_j',[UserAuthController::class, 'dashbord_j']);
+Route::get('Logout',[UserAuthController::class, 'Logout']);
