@@ -42,7 +42,7 @@ class UserAuthController extends Controller
                 }elseif($user->role == "pp"){
                     return redirect('dashbord_pp');
                 }elseif($user->role == "j"){
-                    return redirect('dashbord_j');
+                    return redirect('dashbord_j');      
                 }else{
                     return redirect('login');
                 }
@@ -65,7 +65,7 @@ class UserAuthController extends Controller
             $data = [
                 'User' =>$user
             ];
-            return view ('dash.dtn', $data);
+            return view ('dash.dtn.dtn', $data);
         }else{
             return redirect('login');
         }
@@ -76,7 +76,7 @@ class UserAuthController extends Controller
             $data = [
                 'User' =>$user
             ];
-            return view ('dash.en', $data);
+            return view ('dash.en.en', $data);
         }else{
             return redirect('login');
         }
@@ -87,7 +87,7 @@ class UserAuthController extends Controller
             $data = [
                 'User' =>$user
             ];
-            return view ('dash.pp',$data);
+            return view ('dash.pp.pp',$data);
         }else{
             return redirect('login');
         }
@@ -98,7 +98,7 @@ class UserAuthController extends Controller
             $data = [
                 'User' =>$user
             ];
-            return view ('dash.j',$data);
+            return view ('dash.j.j',$data);
         }else{
             return redirect('login');
         }
