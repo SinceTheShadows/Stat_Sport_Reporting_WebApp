@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>PSP | Dashboard DTN</title>
+        <title>PSP | Dashboard Joueur</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -97,61 +97,7 @@
                         <span></span>
                     </div>
                 </a>
-                <div class="app-search dropdown">
-                    <div class="dropdown-menu dropdown-menu-animated dropdown-lg" id="search-dropdown">
-                        <!-- item-->
-                        <div class="dropdown-header noti-title">
-                            <h5 class="text-overflow mb-2">Found <span class="text-danger">17</span> results</h5>
-                        </div>
-    
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <i class="uil-notes font-16 me-1"></i>
-                            <span>Analytics Report</span>
-                        </a>
-    
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <i class="uil-life-ring font-16 me-1"></i>
-                            <span>How can I help you?</span>
-                        </a>
-    
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <i class="uil-cog font-16 me-1"></i>
-                            <span>User profile settings</span>
-                        </a>
-    
-                        <!-- item-->
-                        <div class="dropdown-header noti-title">
-                            <h6 class="text-overflow mb-2 text-uppercase">Users</h6>
-                        </div>
-    
-                        <div class="notification-list">
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <div class="d-flex">
-                                    <img class="d-flex me-2 rounded-circle" src="assets/images/users/avatar-2.jpg" alt="Generic placeholder image" height="32">
-                                    <div class="w-100">
-                                        <h5 class="m-0 font-14">Erwin Brown</h5>
-                                        <span class="font-12 mb-0">UI Designer</span>
-                                    </div>
-                                </div>
-                            </a>
-    
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <div class="d-flex">
-                                    <img class="d-flex me-2 rounded-circle" src="assets/images/users/avatar-5.jpg" alt="Generic placeholder image" height="32">
-                                    <div class="w-100">
-                                        <h5 class="m-0 font-14">Jacob Deo</h5>
-                                        <span class="font-12 mb-0">Developer</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div> 
-                </div>
+                
             </div>
         </div>
         <!-- end Topbar -->
@@ -178,68 +124,29 @@
                         <li class="side-nav-title side-nav-item">Navigation</li>
 
                         <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarDashboards" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                            <a  href="dashbord_j_dtn"  class="side-nav-link">
                                 <i class="dripicons-user-id"></i>
-                        
-                                <span> Directeur Technique </span>
-                            </a>
-                            
-                        </li>
-
-
-                        <li class="side-nav-item">
-                            <a href="apps-calendar.html" class="side-nav-link">
-                                <i class="dripicons-user"></i>
-                                <span> Entraineur  </span>
+                                <span>Directeur Technique</span>
                             </a>
                         </li>
-
                         <li class="side-nav-item">
-                            <a href="apps-chat.html" class="side-nav-link">
-                                <i class="uil-dumbbell"></i>
-                                <span> Préparateur Physique </span>
-                            </a>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" class="side-nav-link">
+                            <a  href="dashbord_j_j"  class="side-nav-link">
                                 <i class="dripicons-user-group"></i>
-                                <span> Joueur  </span>
-                                
+                                <span>Joueur</span>
                             </a>
-                            
                         </li>
-
                         <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail" class="side-nav-link">
+                            <a  href="dashbord_j_form"  class="side-nav-link">
                                 <i class="uil-clipboard-alt"></i>
-                                <span> Formulaire </span>
-                              
+                                <span>Formulaire</span>
                             </a>
-                            <div class="collapse" id="sidebarEmail">
-                                <ul class="side-nav-second-level">
-                                    <li>
-                                        <a href="apps-email-inbox.html">Inbox</a>
-                                    </li>
-                                    <li>
-                                        <a href="apps-email-read.html">Read Email</a>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
-
-                        
                     </ul>
-
-
                     <!-- End Sidebar -->
-
                     <div class="clearfix"></div>
                     <!-- Sidebar -left -->
-
                 </div>
                 <!-- Left Sidebar End -->
-
                 <div class="content-page">
                     <div class="content">
                         <!-- start page title -->
@@ -254,12 +161,9 @@
                         <!-- end page title -->
                         <div class="alert alert-danger">
 
-                            <h1>You Are Entraineur</h1>
+                            <h1>You Are J in dtn</h1>
                         </div>
-                        
                         <!-- end row -->
-
-                        
                     <!-- Footer Start -->
                     <footer class="footer">
                         <div class="container-fluid">
@@ -272,15 +176,11 @@
                         </div>
                     </footer>
                     <!-- end Footer -->
-
                 </div> 
                 <!-- content-page -->
-
             </div> <!-- end wrapper-->
         </div>
         <!-- END Container -->
-
-
         <!-- Right Sidebar -->
         <div class="end-bar">
 
