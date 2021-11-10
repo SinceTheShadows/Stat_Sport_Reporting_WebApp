@@ -73,6 +73,16 @@
                                         <!-- <span class="text-danger"> @error('token') {{ $message }} @enderror </span> -->
                                     </div>
 
+                                    <div class="form group mt-5">
+                                        {!! NoCaptcha::display() !!}
+                                        {!! NoCaptcha::renderJs('fr', false, 'onloadCallback') !!}
+                                        @error('g-recaptcha-response')
+                                            <span class="text-danger">
+                                                <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
                                     <!-- <div class="mb-3 mb-3">
                                         <div class="form-check">
                                             <input type="checkbox" class="form-check-input" id="checkbox-signin" checked>
@@ -112,6 +122,11 @@
         <!-- bundle -->
         <script src="{{ asset('assets/js/vendor.min.js')}}"></script>
         <script src="{{ asset('assets/js/app.min.js')}}"></script>
+        <script type="text/javascript">
+            var onloadCallback = function() {
+              alert("grecaptcha is ready!");
+            };
+          </script>
         
     </body>
 </html>

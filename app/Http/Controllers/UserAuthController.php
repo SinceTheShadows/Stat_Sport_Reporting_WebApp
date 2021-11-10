@@ -18,7 +18,7 @@ class UserAuthController extends Controller
             else{return redirect('login');}}else {return view ('auth.login');}}
 
     function check(Request $request){
-        $request->validate(['email'=>'required|email','token'=>'required']);
+        $request->validate(['email'=>'required|email','token'=>'required','g-recaptcha-response' => 'required|captcha']);
         $user = User::where('token', '=',$request->token)->first();
         if($user != null){
             if($request->email == $user->email){
