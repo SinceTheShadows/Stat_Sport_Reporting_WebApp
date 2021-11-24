@@ -73,7 +73,7 @@
                                         <!-- <span class="text-danger"> @error('token') {{ $message }} @enderror </span> -->
                                     </div>
 
-                                    <div class="form group mt-5">
+                                    <div class="mb-3 mb-0 text-center">
                                         {!! NoCaptcha::display() !!}
                                         {!! NoCaptcha::renderJs('fr', false, 'onloadCallback') !!}
                                         @error('g-recaptcha-response')
@@ -83,12 +83,6 @@
                                         @enderror
                                     </div>
 
-                                    <!-- <div class="mb-3 mb-3">
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="checkbox-signin" checked>
-                                            <label class="form-check-label" for="checkbox-signin">Remember me</label>
-                                        </div>
-                                    </div> -->
 
                                     <div class="mb-3 mb-0 text-center">
                                         <button class="btn btn-primary" type="submit"> Log In </button>
@@ -99,13 +93,6 @@
                         </div>
                         <!-- end card -->
 
-                        <!--
-                        <div class="row mt-3">
-                            <div class="col-12 text-center">
-                                <p class="text-muted">Don't have an account? <a href="pages-register.html" class="text-muted ms-1"><b>Sign Up</b></a></p>
-                            </div> <!-- end col -->
-                        <!--</div>
-                         end row -->
 
                     </div> <!-- end col -->
                 </div>
